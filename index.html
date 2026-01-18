@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imminent technology</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" ßßtype="image/png" href="logo.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons (Inlined) -->
+
+    <style>
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Subtle texture overlay for paper feel */
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-[#F2F2F2] text-[#111111] font-sans selection:bg-[#3B5998] selection:text-white relative">
+
+    <div class="fixed inset-0 bg-noise pointer-events-none z-50"></div>
+
+    <!-- Navigation -->
+    <nav class="border-b border-[#D4D4D4] sticky top-0 bg-[#F2F2F2]/95 backdrop-blur-sm z-40">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <!-- Logo with fallback logic -->
+                <div id="logo-container" class="contents">
+                    <img src="logo.png" alt="Imminent Technology Logo" class="h-10 w-auto rounded-sm" id="main-logo"
+                        onerror="document.getElementById('main-logo').style.display='none'; document.getElementById('fallback-logo').style.display='flex';">
+
+                    <div id="fallback-logo"
+                        class="w-10 h-10 bg-[#111111] items-center justify-center rounded-sm hidden">
+                        <span class="font-serif font-bold text-[#F2F2F2] text-xl">it</span>
+                    </div>
+                </div>
+
+                <span class="font-sans font-bold text-xl tracking-tight hidden sm:block">
+                    imminent technology
+                </span>
+            </div>
+
+            <div class="flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="https://apichangelog.substack.com" target="_blank"
+                    class="flex items-center gap-2 hover:text-[#3B5998] transition-colors">
+                    The API Changelog
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-3.5 h-3.5">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto px-6 py-12 md:py-20 border-b border-[#D4D4D4]">
+        <div class="max-w-4xl">
+
+
+            <h1 class="font-serif text-5xl md:text-7xl leading-[1.1] mb-8 text-[#111111]">
+                The Future of Connection.
+            </h1>
+
+            <p class="text-xl md:text-2xl text-gray-600 font-light leading-relaxed max-w-2xl">
+                We are an independent research lab studying the protocols, interfaces, and methodologies that
+                make connectivity intuitive for creators and consumable by intelligent systems.
+            </p>
+        </div>
+    </header>
+
+    <!-- Newsletter / Footer Section -->
+    <footer class="bg-[#111111] text-[#EAEAEA]">
+        <div class="max-w-6xl mx-auto px-6 py-24 flex flex-col md:flex-row gap-16 md:gap-32">
+
+            <!-- Newsletter Side -->
+            <div class="flex-1">
+                <h3 class="font-serif text-3xl mb-6">The API Changelog</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">
+                    Subscribe to the <strong>API Changelog</strong> for
+                    weekly research updates and early access to our prototypes.
+                </p>
+
+                <form class="flex gap-0 max-w-md" action="https://apichangelog.substack.com/subscribe" method="get"
+                    target="_blank">
+                    <input type="email" name="email" placeholder="researcher@university.edu"
+                        class="bg-[#1A1A1A] border border-[#333] px-4 py-3 w-full font-mono text-sm focus:outline-none focus:border-[#3B5998] transition-colors placeholder:text-gray-600 text-[#EAEAEA]"
+                        required />
+                    <button type="submit"
+                        class="bg-[#EAEAEA] text-[#111111] px-6 py-3 font-bold font-mono text-xs uppercase tracking-wider hover:bg-white transition-colors">
+                        Subscribe
+                    </button>
+                </form>
+                <div class="mt-4 flex items-center gap-2 text-xs font-mono text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="w-3 h-3">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                    </svg>
+                    <span>Read by 1,000+ industry leaders</span>
+                </div>
+            </div>
+
+            <!-- Contact / Meta Side -->
+            <div class="flex-1 md:max-w-xs">
+                <div class="mb-8">
+                    <h5 class="font-mono text-xs tracking-widest text-gray-500 uppercase mb-4">The Lab</h5>
+                    <div class="flex items-start gap-3 text-gray-400 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="mt-1 shrink-0 w-4 h-4">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>Based in Europe.<br />Operating globally.</span>
+                    </div>
+                    <!--
+                    <div class="flex items-center gap-3 text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-4 h-4">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        <a href="mailto:research@imminent.technology"
+                            class="hover:text-white transition-colors">research@imminent.technology</a>
+                    </div>
+                    -->
+                </div>
+
+                <!--
+                <div class="border-t border-[#333] pt-8">
+                    <h5 class="font-mono text-xs tracking-widest text-gray-500 uppercase mb-4">Support The Research
+                    </h5>
+                    <p class="text-sm text-gray-400 leading-relaxed mb-4">
+                        We are currently seeking <strong>Anchor Sponsors</strong> for our 2026 Prototyping Programme.
+                    </p>
+                    <a href="#"
+                        class="text-sm font-bold border-b border-[#333] hover:border-white pb-0.5 transition-colors">
+                        Become a Partner
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+
+        <div
+            class="max-w-6xl mx-auto px-6 py-8 border-t border-[#333] flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 font-mono">
+            <span>© 2026 IMMINENT TECHNOLOGY</span>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <span>INDEPENDENT</span>
+                <span>OPEN SOURCE</span>
+                <span>CONSUMER-FOCUSED</span>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
